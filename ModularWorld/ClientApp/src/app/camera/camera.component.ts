@@ -9,7 +9,7 @@ export class CameraComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var video = document.querySelector("#videoElement");
+    let video = document.getElementById("videoElement") as HTMLVideoElement;
 
     if (navigator.mediaDevices.getUserMedia) {
       navigator.mediaDevices.getUserMedia({ video: true })
